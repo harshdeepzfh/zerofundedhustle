@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroFundedHustle | Escape The 9-5 With Proven Online Business Models</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- SEO Meta Tags --><meta name="description" content="Stuck in a 9-5? Learn how to build a profitable online business with zero investment. Get 6 proven blueprints to earn ₹50,000-₹1,50,000/month. Your roadmap to financial freedom starts here.">
+    <meta name="keywords" content="online business india, zero investment business, escape 9-5, side hustle india, make money online india, financial freedom, Harshdeep Singh, zerofundedhustle">
+    <meta name="author" content="Harshdeep Singh">
+    
+    <!-- Google Analytics (Placeholder) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YOUR_TRACKING_ID');
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #010409;
+            color: #E6EDF3;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .accent-color { color: #238636; } /* Vibrant Green */
+        .bg-accent { background-color: #238636; }
+        .border-accent { border-color: #238636; }
+        .hover-bg-accent:hover { background-color: #2EA043; }
+        
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .faq-item.active .accordion-content {
+            max-height: 500px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        .animated-gradient {
+            background: linear-gradient(90deg, #39d353, #26a641, #2ea043, #39d353);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-gradient 5s ease infinite;
+        }
+        @keyframes text-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .feature-card, .testimonial-card, .audience-card {
+            background-color: #0D1117;
+            border: 1px solid #30363d;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .feature-card:hover, .testimonial-card:hover, .audience-card:hover {
+            transform: translateY(-5px);
+            border-color: #238636;
+        }
+        .faq-item {
+            background-color: #0D1117;
+            border: 1px solid #30363d;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+         .faq-item:hover {
+            border-color: #238636;
+        }
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-container {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        /* Custom scrollbar for modal */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-content::-webkit-scrollbar-track {
+            background: #0D1117;
+        }
+        .modal-content::-webkit-scrollbar-thumb {
+            background-color: #30363d;
+            border-radius: 4px;
+            border: 2px solid #0D1117;
+        }
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background-color: #238636;
+        }
+        .glowing-btn {
+            position: relative;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            background: #238636;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px #238636, 0 0 15px #238636, 0 0 25px #238636;
+        }
+        .glowing-btn:hover {
+            background: #2EA043;
+            box-shadow: 0 0 10px #2EA043, 0 0 25px #2EA043, 0 0 50px #2EA043;
+        }
+        .star-rating {
+            color: #FFD700; /* Gold color for stars */
+        }
+        .ebook-glow {
+            /* This creates a shadow on all sides (0 0) with a 15px blur, using your accent color */
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+            transition: box-shadow 0.3s ease, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); /* Combined transitions */
+        }
+        .ebook-glow:hover {
+             /* A slightly stronger glow on hover */
+            box-shadow: 0 0 25px 5px rgba(34, 197, 94, 0.6);
+        }
+        
+        /* --- TESTIMONIAL SCROLLER STYLES --- */
+        .scroller {
+            max-width: 100%;
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+        .scroller__inner {
+            display: flex;
+            gap: 1.5rem; /* 24px */
+            width: max-content; /* This is key */
+            animation: scroll-testimonial 40s linear infinite; /* Renamed animation */
+        }
+        .scroller:hover .scroller__inner {
+            animation-play-state: paused; /* Pause on hover */
+        }
+        @keyframes scroll-testimonial { /* Renamed keyframes */
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(calc(-50% - 0.75rem)); /* Half of the content width + half the gap */
+            }
+        }
+        .scroller .testimonial-card {
+            width: 350px; /* Give cards a fixed width so they don't collapse */
+            flex-shrink: 0; /* Prevent cards from shrinking */
+            height: auto; /* Override height: 100% to allow flexbox stretch to work */
+        }
+        /* --- END TESTIMONIAL SCROLLER STYLES --- */
+
+        /* --- Review Form Transition --- */
+        #review-form-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease-in-out;
+        }
+        #review-form-container.visible {
+            max-height: 500px; /* Adjust if form is taller */
+        }
+         /* --- End Review Form Transition --- */
+
+         /* --- Star Rating Styles --- */
+         .star-input-container {
+             display: flex;
+             gap: 0.25rem; /* spacing between stars */
+             justify-content: center; /* Center stars in form */
+             margin-bottom: 1rem; /* Add space below stars */
+         }
+         .star-input-container svg {
+             width: 2rem; /* size of stars */
+             height: 2rem;
+             cursor: pointer;
+             color: #4b5563; /* gray-600 for empty stars */
+             transition: color 0.2s;
+         }
+         .star-input-container svg.filled {
+             color: #FFD700; /* gold for filled stars */
+         }
+         /* --- End Star Rating Styles --- */
+
+         /* --- BANNER SCROLLER STYLES --- */
+        .banner-scroller {
+            background-color: #0D1117; /* Darker background */
+            padding: 0.75rem 0; /* Vertical padding */
+            overflow: hidden;
+            white-space: nowrap; /* Prevent wrapping */
+        }
+        .banner-scroller__inner {
+            display: inline-block; /* Changed from flex */
+            animation: scroll-banner 35s linear infinite; /* Adjusted speed */
+        }
+        .banner-scroller:hover .banner-scroller__inner {
+            animation-play-state: paused; /* Pause on hover */
+        }
+        .banner-scroller span {
+            display: inline-flex; /* Use inline-flex for better icon alignment */
+            align-items: center; /* Vertically align icon and text */
+            padding: 0 1.5rem; /* Reduced horizontal spacing */
+            font-size: 1rem; /* Adjust size as needed */
+            color: #E6EDF3; /* Light text */
+            font-weight: 600; /* Semibold - slightly less heavy than bold */
+            margin: 0 0.5rem; /* Add small margin between items */
+        }
+        /* Removed icon specific style as emojis render inline */
+        @keyframes scroll-banner { /* Separate keyframes */
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-50%); /* Scroll exactly half the width */
+            }
+        }
+         /* --- END BANNER SCROLLER STYLES --- */
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-black/30 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tight text-gray-200">zero<span class="accent-color">funded</span>hustle</a>
+            <!-- Updated Header CTA Link -->
+            <a href="https://u.payu.in/PAYUMN/lIsRGkuH2FP8" target="_blank" class="hidden md:inline-block bg-accent text-white font-bold py-2 px-6 rounded-md hover-bg-accent transition-colors">
+                Get The Blueprint
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="py-24 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gray-200 mb-4">Your Salary Is A Cage.</h1>
+                <h2 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter animated-gradient mb-8">Build The Key.</h2>
+                <p class="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto mb-6">The zero-risk blueprint for building a real side business that replaces your income, even if you have no time, no money, and no experience.</p>
+                <!-- UPDATED HIGHLIGHT -->
+                <p class="text-lg md:text-xl font-semibold text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+                    From <span class="text-red-500">₹32 Lakh Debt</span> & <span class="text-gray-400">27k a month</span> → <span class="accent-color">+₹5 Lakh/Month</span><br class="hidden md:block"> Using These <span class="accent-color">6 Zero-Risk Side Hustles</span>
+                </p>
+                <!-- END UPDATED HIGHLIGHT -->
+                <!-- Updated Hero CTA Link -->
+                <a href="https://u.payu.in/PAYUMN/lIsRGkuH2FP8" target="_blank" class="glowing-btn text-lg font-bold inline-block">
+                    Start Your Escape →
+                </a>
+            </div>
+        </section>
+
+        <!-- Scrolling Banner Section (Location 1) -->
+        <section class="banner-scroller border-y border-gray-800">
+            <div class="banner-scroller__inner">
+                <!-- Replaced text and removed SVGs -->
+                <span>📉 From ₹32L Debt → 📈 To ₹5L/Month</span>
+                <span>•</span>
+                <span>🔓 Escape 9-5 Cage</span>
+                <span>•</span>
+                <span>💡 6 Proven Methods</span>
+                <span>•</span>
+                <span>🗓️ 6-Month Action Plan</span>
+                <span>•</span>
+                <span>🎯 ₹0 to ₹50K/Month</span>
+                <span>•</span>
+                <span>🛡️ Zero Risk</span>
+                <!-- Duplicate Set -->
+                 <span>📉 From ₹32L Debt → 📈 To ₹5L/Month</span>
+                <span>•</span>
+                <span>🔓 Escape 9-5 Cage</span>
+                <span>•</span>
+                <span>💡 6 Proven Methods</span>
+                <span>•</span>
+                <span>🗓️ 6-Month Action Plan</span>
+                <span>•</span>
+                <span>🎯 ₹0 to ₹50K/Month</span>
+                <span>•</span>
+                <span>🛡️ Zero Risk</span>
+            </div>
+        </section>
+        <!-- END Scrolling Banner Section -->
+
+        <!-- Pain Points Section -->
+        <section class="py-24 md:py-32 section bg-[#0D1117]"> <!-- Removed border-y -->
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-200 mb-4">Are You Feeling Trapped?</h2>
+                <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">If you're nodding your head to any of these questions, you're not alone.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="feature-card text-center">
+                        <!-- Replaced Icon: CurrencyRupeeIcon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 accent-color mx-auto mb-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <p class="text-lg font-semibold text-gray-300">Does your salary disappear by the 15th of the month?</p>
+                    </div>
+                    <div class="feature-card text-center">
+                        <!-- Replaced Icon: ExclamationTriangleIcon -->
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 accent-color mx-auto mb-4">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                         </svg>
+                        <p class="text-lg font-semibold text-gray-300">Do you live in fear of unexpected expenses?</p>
+                    </div>
+                    <div class="feature-card text-center">
+                         <!-- Kept Icon: LockClosedIcon -->
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 accent-color mx-auto mb-4">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                         </svg>
+                        <p class="text-lg font-semibold text-gray-300">Is your 9-5 job feeling more like a cage than a career?</p>
+                    </div>
+                    <div class="feature-card text-center">
+                        <!-- Replaced Icon: ArrowTrendingUpIcon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 accent-color mx-auto mb-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                        </svg>
+                        <p class="text-lg font-semibold text-gray-300">Tired of watching others succeed online while you're on the sidelines?</p>
+                    </div>
+                    <div class="feature-card text-center">
+                        <!-- Replaced Icon: LightBulbIcon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 accent-color mx-auto mb-4">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                        </svg>
+                        <p class="text-lg font-semibold text-gray-300">Have great ideas but have no clue where to actually start?</p>
+                    </div>
+                    <div class="feature-card text-center">
+                        <!-- Replaced Icon: ClockIcon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 accent-color mx-auto mb-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <p class="text-lg font-semibold text-gray-300">Does the thought of being in the same job 5 years from now terrify you?</p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                     <!-- Updated Pain Points CTA Link -->
+                     <a href="https://u.payu.in/PAYUMN/lIsRGkuH2FP8" target="_blank" class="bg-accent text-white font-bold py-3 px-8 rounded-lg text-lg hover-bg-accent transition-colors inline-block">
+                        Yes, That's Me. I Need A Plan.
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- "Meet Your Mentor" Section -->
+        <section class="py-24 md:py-32 section">
+            <div class="container mx-auto px-6 max-w-4xl"> 
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-200 mb-4 text-center">Meet Your Mentor</h2>
+                <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-200 mb-6 text-center">From <span class="text-red-500">-₹32 Lakhs</span> in Debt to <span class="text-green-400">+₹5 Lakh/Month</span>.</h3>
+                
+                <p class="text-lg text-gray-400 mb-4 text-center md:text-left">I'm Harshdeep Singh, and I want to be crystal clear about one thing from the start: I'm not one of those "gurus" who was born with a silver spoon or stumbled into overnight success. My story is <strong>messy, painful, and 100% real</strong>—just like the financial struggles you might be facing right now.</p>
+                <!-- Changed 25,000 to 27,000 in the line below -->
+                <p class="text-gray-500 mb-6 text-center md:text-left">At my lowest point, I found myself drowning in <strong>₹32 lakhs of debt</strong> from <strong>failed business ventures</strong>. The weight of that number was crushing—<strong>sleepless nights, constant anxiety, and the shame</strong> of watching my dreams turn into financial nightmares. By age 22, my "safe" 9-5 job paying <strong>₹27,000 per month</strong> couldn't even cover my EMIs, let alone provide the life I wanted for myself and my family.</p>
+                <p class="text-gray-500 mb-6 text-center md:text-left">But here's what I learned in that darkness: when no one throws you a lifeline, you <strong>build your own ladder</strong>. Through <strong>relentless trial and error</strong>—and countless more failures—I slowly pieced together a system of <strong>zero-funded businesses</strong> that didn't require quitting my job or risking money I didn't have. I started with nothing but determination and a willingness to learn from every mistake.</p>
+                <p class="text-gray-500 mb-6 text-center md:text-left">That system didn't just help me <strong>clear every rupee of debt</strong>—it transformed my life. Today, those same strategies generate a consistent <strong>₹5 lakh per month</strong>, giving me the <strong>financial freedom</strong> and peace of mind I once thought was impossible for someone like me.</p>
+                <p class="text-lg font-semibold text-gray-200 mb-6 text-center md:text-left">I'm not here to sell you dreams or empty promises. I'm here to hand you the exact, <strong>battle-tested blueprint</strong> I used to escape my financial prison. Every strategy in this book was forged in the fire of real struggle and proven to work when I had nothing left to lose. This isn't theoretical advice—it's what <strong>actually worked</strong> when my back was against the wall.</p>
+                <p class="text-lg font-semibold text-gray-200 text-center md:text-left">My mission is simple: to give you the same <strong>practical, zero-risk roadmap</strong> that transformed my life, adapted for real people with real responsibilities who deserve <strong>real results</strong>.</p>
+                <!-- End of replaced text -->
+            </div>
+        </section>
+
+        <!-- Ebook Cover Section -->
+        <section class="py-24 section">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="flex justify-center md:justify-end">
+                        <img src="ebookcover.png" alt="Escape the 9-5 Ebook Cover" class="w-full max-w-sm rounded-lg ebook-glow transform hover:scale-105" onerror="this.src='https://placehold.co/400x500/0D1117/E6EDF3?text=Ebook+Cover'; this.onerror=null;">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-200 mb-4">Here Is The Exact Blueprint</h2>
+                        <!-- Changed 25k to 27k in the line below -->
+                        <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-400 mb-8">How I Escaped My ₹27k Job With Zero-Risk Side Businesses</h3>
+                        <p class="text-lg text-gray-400 mb-8">This isn't just a book; it's a complete system. Inside, you'll find the step-by-step strategies, mindset shifts, and actionable plans I used to build my freedom from zero.</p>
+                        
+                        <!-- New Pricing Block -->
+                        <div class="my-8">
+                            <span class="text-xl text-gray-500 line-through">Actual Value: ₹15,000+</span>
+                            <div class="flex items-center justify-center md:justify-start space-x-2 mt-2">
+                                 <span class="text-5xl font-black text-gray-200">₹299</span>
+                                 <span class="text-lg text-gray-500"> One-Time</span>
+                            </div>
+                        </div>
+                        <!-- End New Pricing Block -->
+
+                        <!-- Updated Ebook Cover CTA Link -->
+                        <a href="https://u.payu.in/PAYUMN/lIsRGkuH2FP8" target="_blank" class="bg-accent text-white font-bold py-3 px-8 rounded-lg text-lg hover-bg-accent transition-colors inline-block">
+                            Get Your Copy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Benefits Section -->
+        <section class="py-24 md:py-32 section bg-[#0D1117] border-y border-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 animated-gradient">This Is More Than An Ebook. It's Your New Reality.</h2>
+                    <p class="text-lg text-gray-500 mb-16">Here is a glimpse of the transformation waiting for you inside.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Benefit Cards -->
+                    <div class="feature-card text-left">
+                        <h3 class="font-bold text-xl text-gray-200 mb-2"><strong>6 Blueprints to Earn ₹50k-₹150k/Month</strong></h3>
+                        <p class="text-gray-500 flex-grow">Stop guessing. Get copy-paste models for businesses you can start today, with the real math included.</p>
+                    </div>
+                    <div class="feature-card text-left">
+                        <h3 class="font-bold text-xl text-gray-200 mb-2"><strong>Start With ₹0 Investment</strong></h3>
+                        <p class="text-gray-500 flex-grow">Your bank balance doesn't define your potential. Every model is built for hustle, not capital.</p>
+                    </div>
+                    <div class="feature-card text-left">
+                        <h3 class="font-bold text-xl text-gray-200 mb-2"><strong>Build a Financial Safety Net</strong></h3>
+                        <p class="text-gray-500 flex-grow">Create cash flow that protects you if your salary stops. Never be dependent on one income source again.</p>
+                    </div>
+                    <div class="feature-card text-left">
+                        <h3 class="font-bold text-xl text-gray-200 mb-2"><strong>Roadmap to ₹50k/Month in 3 Months</strong></h3>
+                        <p class="text-gray-500 flex-grow">An exact, day-by-day plan to follow. No more confusion, just clear, actionable steps.</p>
+                    </div>
+                    <div class="feature-card text-left">
+                        <h3 class="font-bold text-xl text-gray-200 mb-2"><strong>Free Lifetime Updates</strong></h3>
+                        <p class="text-gray-500 flex-grow">The game changes. Your blueprint will too. Get every future update for free, forever.</p>
+                    </div>
+                    <div class="feature-card text-left">
+                        <h3 class="font-bold text-xl text-gray-200 mb-2"><strong>Direct Email Support</strong></h3>
+                        <p class="text-gray-500 flex-grow">Stuck? Email me directly. I'm not just a seller; I'm your partner in this journey.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-16">
+                     <!-- Updated Benefits CTA Link -->
+                     <a href="https://u.payu.in/PAYUMN/lIsRGkuH2FP8" target="_blank" class="glowing-btn text-lg font-bold inline-block">
+                        I Want These Results →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Magnet Section -->
+        <section class="py-24 section">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-4xl font-extrabold tracking-tight text-gray-200 mb-4">Want a FREE Taste of Freedom?</h2>
+                <p class="text-lg text-gray-500 mb-8">Get the first two chapters of "Escape The 9-5"—including one complete business blueprint—delivered to your inbox right now. See for yourself how actionable this guide is.</p>
+                <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" id="lead-email" name="email" placeholder="Enter your best email..." required class="flex-grow bg-[#0D1117] border border-gray-700 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                    <button type="submit" class="bg-accent text-white font-bold py-3 px-6 rounded-md hover-bg-accent transition-colors">
+                        Send My Free Chapters
+                    </button>
+                </form>
+                 <p id="lead-success-message" class="text-green-400 mt-4 hidden">Success! Check your inbox for the free chapters.</p>
+            </div>
+        </section>
+        
+        <!-- "Who Is This For?" Section -->
+        <section class="py-24 md:py-32 section bg-[#0D1117] border-y border-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-200 mb-16">This is for the person who knows they're meant for more.</h2>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="audience-card text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-700 bg-gray-900 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-red-500"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-200 mb-2 flex-grow">The Employee in Debt</h3>
+                        <p class="text-gray-500">You're trapped in a cycle of EMIs and bills. <strong>This is your strategic escape route.</strong></p>
+                    </div>
+                     <div class="audience-card text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-700 bg-gray-900 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-200 mb-2 flex-grow">The Silent Hustler</h3>
+                        <p class="text-gray-500">You work after hours, dreaming of freedom. <strong>This turns your effort into predictable income.</strong></p>
+                    </div>
+                     <div class="audience-card text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-700 bg-gray-900 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-500"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-.07.002z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-200 mb-2 flex-grow">The Ambitious Student</h3>
+                        <p class="text-gray-500">Tired of useless theory? <strong>This is your real-world MBA in starting a business.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-24 md:py-32 section overflow-hidden">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-200 mb-16">Proof From People Just Like You.</h2>
+            </div>
+            
+            <!-- New Scroller -->
+            <div class="max-w-6xl mx-auto">
+                 <div class="scroller">
+                     <div class="scroller__inner">
+                        <!-- Original 3 Testimonials -->
+                        <div class="testimonial-card text-left">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=AS" alt="Aman S." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Aman S., Bengaluru</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"I felt so stuck. Harshdeep's book gave me a clear plan. <strong>I started the e-commerce hustle and made my first ₹10,000 in just 3 weeks!</strong> This was the push I desperately needed."</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                             <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=PK" alt="Priya K." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Priya K., Mumbai</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"The mindset chapters alone are worth 10x the price. <strong>The 'Capital Compass' concept completely changed how I see my own skills.</strong> It's not about money; it's about resourcefulness. Priceless."</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                             <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=RV" alt="Rohan V." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Rohan V., Delhi</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"No fluff, no BS. This is a real, actionable guide for the Indian market. <strong>It's the first book that truly understands our struggle and provides a practical way out.</strong> Highly recommended."</p>
+                        </div>
+
+                        <!-- Added 3 New Testimonials -->
+                        <div class="testimonial-card text-left">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=ST" alt="Sameer T." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Sameer T., Pune</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"As a student, this was a goldmine. The zero-investment models are practical, not just theory. <strong>Already started my first side hustle using the service blueprint.</strong>"</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                             <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=MG" alt="Meera G." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Meera G., Hyderabad</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"I was so tired of my corporate job but too scared to leave. This book gave me the courage and the *exact steps* to start building something for myself on the side. <strong>My safety net is finally growing.</strong>"</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                             <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=VN" alt="Vikram N." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Vikram N., Chennai</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"Honestly, I thought it was another scam. The 'Do The Work' guarantee made me try it. Best ₹299 I've ever spent. <strong>The mindset section alone is life-changing.</strong> No exaggeration."</p>
+                        </div>
+
+                        <!-- DUPLICATE SET for infinite scroll -->
+                        <div class="testimonial-card text-left">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=AS" alt="Aman S." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Aman S., Bengaluru</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"I felt so stuck. Harshdeep's book gave me a clear plan. <strong>I started the e-commerce hustle and made my first ₹10,000 in just 3 weeks!</strong> This was the push I desperately needed."</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                             <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=PK" alt="Priya K." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Priya K., Mumbai</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"The mindset chapters alone are worth 10x the price. <strong>The 'Capital Compass' concept completely changed how I see my own skills.</strong> It's not about money; it's about resourcefulness. Priceless."</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                             <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=RV" alt="Rohan V." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Rohan V., Delhi</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"No fluff, no BS. This is a real, actionable guide for the Indian market. <strong>It's the first book that truly understands our struggle and provides a practical way out.</strong> Highly recommended."</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                            <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=ST" alt="Sameer T." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Sameer T., Pune</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"As a student, this was a goldmine. The zero-investment models are practical, not just theory. <strong>Already started my first side hustle using the service blueprint.</strong>"</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                             <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=MG" alt="Meera G." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Meera G., Hyderabad</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"I was so tired of my corporate job but too scared to leave. This book gave me the courage and the *exact steps* to start building something for myself on the side. <strong>My safety net is finally growing.</strong>"</p>
+                        </div>
+                        <div class="testimonial-card text-left">
+                             <div class="flex items-center mb-4">
+                                <img src="https://placehold.co/50x50/010409/E6EDF3?text=VN" alt="Vikram N." class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold text-gray-200">Vikram N., Chennai</p>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-400">"Honestly, I thought it was another scam. The 'Do The Work' guarantee made me try it. Best ₹299 I've ever spent. <strong>The mindset section alone is life-changing.</strong> No exaggeration."</p>
+                        </div>
+
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Review Submission Section with Accordion -->
+        <section class="py-24 section">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl font-bold text-gray-200 mb-4">Found Value? Share Your Story!</h2>
+                <p class="text-lg text-gray-500 mb-8">If this blueprint helped you, your review can inspire others. Please share your experience below – it truly helps!</p>
+                
+                <button id="show-review-form-button" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-600 transition-colors inline-block mb-8">
+                    Share Your Experience →
+                </button>
+
+                <div id="review-form-container"> <!-- Initially hidden -->
+                    <form id="review-form" class="space-y-6 max-w-lg mx-auto text-left">
+                        <div>
+                            <label for="review-name" class="block text-sm font-medium text-gray-400 mb-1">Your Name</label>
+                            <input type="text" id="review-name" name="name" placeholder="Enter your name..." required class="w-full bg-[#010409] border border-gray-700 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                        </div>
+                        
+                        <!-- Star Rating Input -->
+                        <div>
+                             <label class="block text-sm font-medium text-gray-400 mb-1 text-center">Your Rating</label> <!-- Centered Label -->
+                             <div id="star-rating-input" class="star-input-container">
+                                 <!-- Stars will be generated by JS -->
+                             </div>
+                             <input type="hidden" id="review-rating" name="rating" value="0">
+                        </div>
+                        <!-- End Star Rating Input -->
+
+                        <div>
+                            <label for="review-text" class="block text-sm font-medium text-gray-400 mb-1">Your Review</label>
+                            <textarea id="review-text" name="review" rows="4" placeholder="Share your experience..." required class="w-full bg-[#010409] border border-gray-700 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 transition"></textarea>
+                        </div>
+                        <div class="text-center pt-2">
+                            <button type="submit" class="bg-accent text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-accent transition-colors inline-block">
+                                Submit My Review
+                            </button>
+                        </div>
+                    </form>
+                     <p id="review-success-message" class="text-green-400 mt-6 hidden">Thank you! Your review has been submitted.</p>
+                 </div>
+            </div>
+        </section>
+        <!-- End New Review Submission Section -->
+
+        <!-- FAQ Section --><section id="faq-section" class="py-24 md:py-32 section bg-[#0D1117] border-y border-gray-800">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-200 text-center mb-16">Your Doubts, Destroyed.</h2>
+                <div id="faq-container" class="space-y-4"></div>
+            </div>
+        </section>
+
+        <!-- Scrolling Banner Section (Location 2) -->
+        <section class="banner-scroller border-t border-gray-800"> <!-- Added border-t -->
+            <div class="banner-scroller__inner">
+                <!-- Replaced text and removed SVGs -->
+                <span>📉 From ₹32L Debt → 📈 To ₹5L/Month</span>
+                <span>•</span>
+                <span>🔓 Escape 9-5 Cage</span>
+                <span>•</span>
+                <span>💡 6 Proven Methods</span>
+                <span>•</span>
+                <span>🗓️ 6-Month Action Plan</span>
+                <span>•</span>
+                <span>🎯 ₹0 to ₹50K/Month</span>
+                <span>•</span>
+                <span>🛡️ Zero Risk</span>
+                <!-- Duplicate Set -->
+                 <span>📉 From ₹32L Debt → 📈 To ₹5L/Month</span>
+                <span>•</span>
+                <span>🔓 Escape 9-5 Cage</span>
+                <span>•</span>
+                <span>💡 6 Proven Methods</span>
+                <span>•</span>
+                <span>🗓️ 6-Month Action Plan</span>
+                <span>•</span>
+                <span>🎯 ₹0 to ₹50K/Month</span>
+                <span>•</span>
+                <span>🛡️ Zero Risk</span>
+            </div>
+        </section>
+        <!-- END Scrolling Banner Section -->
+
+        <!-- Pricing / Final CTA Section --><section id="pricing" class="py-24 md:py-32 section">
+            <div class="container mx-auto px-6">
+                <!-- Applied changes here: padding and heading/price text size -->
+                <div class="bg-[#0D1117] border border-green-700 rounded-xl p-6 md:p-16 text-center max-w-4xl mx-auto shadow-2xl shadow-green-500/20">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-200 mb-4">Your Escape Plan Is One Click Away.</h2>
+                    <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">Stop trading your life for a salary. This is your chance to build something that's truly yours. Get the complete blueprint that took me from -₹32 Lakhs in debt to a +₹5 Lakh/month business.</p>
+                    
+                     <!-- Highlight text size was already adjusted -->
+                    <p class="text-lg md:text-xl font-semibold text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                       From <span class="text-red-500">₹32 Lakh Debt</span> & <span class="text-gray-400">27k a month</span> → <span class="accent-color">+₹5 Lakh/Month</span><br class="hidden md:block"> Using These <span class="accent-color">6 Zero-Risk Side Hustles</span>
+                    </p>
+                    
+                    <div class="my-8">
+                        <span class="text-2xl text-gray-500 line-through">Actual Value: ₹15,000+</span>
+                        <div class="flex items-center justify-center space-x-2 mt-2">
+                             <!-- Reduced price size on mobile -->
+                             <span class="text-5xl md:text-6xl font-black text-gray-200">₹299</span>
+                             <span class="text-xl text-gray-500"> One-Time Investment</span>
+                        </div>
+                        <p class="text-gray-400 font-semibold mt-4">✓ 6 Complete Business Blueprints<br>✓ Lifetime Access & Free Future Updates</p>
+                    </div>
+
+                    <!-- Updated Final CTA Link -->
+                    <a href="https://u.payu.in/PAYUMN/lIsRGkuH2FP8" target="_blank" class="w-full max-w-md mx-auto block glowing-btn text-2xl font-bold py-4">
+                        Get Instant Access Now
+                    </a>
+                    <div class="mt-10 text-gray-500">
+                        <p class="font-bold text-lg text-gray-300 mb-2">My 14-Day "Do The Work" Guarantee</p>
+                        <p class="max-w-xl mx-auto">If you genuinely apply the strategies in this book and don't see a clear path to your first ₹10,000, email me your work, and I'll refund you 100%. I'm that confident in this system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer --><footer class="mt-12 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <div class="mb-6">
+                <a href="https://www.instagram.com/zerofundedhustle" target="_blank" class="mx-3 hover:text-green-400 transition-colors">Instagram</a>
+            </div>
+            <div class="mb-6 text-sm">
+                 <a id="privacy-policy-link" href="#" class="mx-3 hover:text-green-400 transition-colors">Privacy Policy</a>
+                 <a id="terms-of-use-link" href="#" class="mx-3 hover:text-green-400 transition-colors">Terms of Use</a>
+                 <a id="refund-policy-link" href="#" class="mx-3 hover:text-green-400 transition-colors">Refund Policy</a>
+                 <a id="contact-us-link" href="#" class="mx-3 hover:text-green-400 transition-colors">Contact Us</a>
+                 <!-- Added Sitemap Link -->
+                 <a href="sitemap.html" target="_blank" class="mx-3 hover:text-green-400 transition-colors">Sitemap</a>
+            </div>
+            <p class="text-sm">&copy; 2025 <strong class="font-semibold text-gray-400">zerofundedhustle</strong>. All Rights Reserved.</p>
+            <p class="text-xs mt-2">Built in India, for the Indian Hustler.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA --><div id="mobile-cta" class="md:hidden fixed bottom-0 left-0 right-0 bg-black/50 backdrop-blur-lg p-4 border-t border-gray-800 z-40 transform translate-y-full transition-transform duration-300">
+        <!-- Updated Mobile CTA Link -->
+        <a href="https://u.payu.in/PAYUMN/lIsRGkuH2FP8" target="_blank" class="w-full block bg-accent text-white font-bold py-4 px-6 rounded-lg text-lg text-center hover-bg-accent transition-colors shadow-lg shadow-green-500/20">
+            Your Freedom Starts Now
+        </a>
+    </div>
+    
+    <!-- All Modals are here --><!-- Privacy Policy Modal --><div id="privacy-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 modal-overlay opacity-0">
+        <div class="modal-container bg-[#0D1117] border border-gray-800 rounded-lg w-full max-w-3xl max-h-[90vh] flex flex-col transform scale-95 opacity-0">
+            <div class="flex-shrink-0 p-6 border-b border-gray-800 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-200">Privacy Policy</h2>
+                <button data-close-modal="privacy-modal" class="text-gray-500 hover:text-white text-3xl">&times;</button>
+            </div>
+            <div class="modal-content flex-grow overflow-y-auto p-6">
+                <p class="text-sm text-gray-500 mb-6">Last Updated: October 21, 2025</p>
+                <div class="space-y-4 text-gray-400">
+                    <p>Welcome to <strong class="font-semibold text-gray-300">zerofundedhustle</strong> (“we,” “our,” “us”). Your privacy matters to us. This Privacy Policy explains how we collect, use, and protect your personal information when you visit <strong class="font-semibold text-gray-300">zerofundedhustle.com</strong> or make a purchase from us.</p>
+                    <div><h3 class="font-semibold text-gray-300">1. Information We Collect</h3><p>We collect details like your name and email when you purchase, basic usage data (IP address, browser type), and use cookies to improve site performance.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">2. How We Use Your Information</h3><p>We use your data to: Process and deliver ebook purchases, communicate with you, send updates (if you opt in), and improve our website.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">3. Payments</h3><p>All payments are processed securely through Razorpay. We don’t store your card details.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">4. Data Sharing</h3><p>We do not sell or rent your data. We only share it with essential service providers like payment processors.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">5. Contact Us</h3><p>Questions? Contact us at: Email: hello@zerofundedhustle.com</p></div>
+                </div>
+            </div>
+            <div class="flex-shrink-0 p-4 border-t border-gray-800 text-center">
+                <a href="privacypolicy.html" target="_blank" class="text-sm accent-color hover:underline">For the full details, please click here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Use Modal --><div id="terms-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 modal-overlay opacity-0">
+         <div class="modal-container bg-[#0D1117] border border-gray-800 rounded-lg w-full max-w-3xl max-h-[90vh] flex flex-col transform scale-95 opacity-0">
+            <div class="flex-shrink-0 p-6 border-b border-gray-800 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-200">Terms of Use</h2>
+                <button data-close-modal="terms-modal" class="text-gray-500 hover:text-white text-3xl">&times;</button>
+            </div>
+            <div class="modal-content flex-grow overflow-y-auto p-6">
+                <p class="text-sm text-gray-500 mb-6">Last Updated: October 21, 2025</p>
+                <div class="space-y-4 text-gray-400">
+                    <p>By accessing or using <strong class="font-semibold text-gray-300">zerofundedhustle.com</strong>, you agree to these Terms of Use. If you don’t agree, please don’t use the site.</p>
+                    <div><h3 class="font-semibold text-gray-300">1. Use of Our Website</h3><p>You agree to use this website only for lawful purposes. You must not reproduce, sell, or distribute our content or ebooks without permission.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">2. Products and Payments</h3><p>All prices are in INR. Payments are processed securely. As our products are digital, please refer to our Refund Policy for details on eligibility.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">3. Intellectual Property</h3><p>All content on this website, including the ebook, belongs to <strong class="font-semibold text-gray-300">zerofundedhustle</strong>. Purchasing an ebook gives you a personal license to read it, not to share or resell it.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">4. Disclaimer</h3><p>All content is for educational purposes only. We don’t guarantee specific results. Any actions you take are your responsibility.</p></div>
+                     <div><h3 class="font-semibold text-gray-300">5. Governing Law</h3><p>These terms are governed by the laws of India. Any disputes will be handled in the courts of Punjab, India.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">6. Contact</h3><p>For any questions about these Terms, reach us at: Email: hello@zerofundedhTle.com</p></div>
+                </div>
+            </div>
+            <div class="flex-shrink-0 p-4 border-t border-gray-800 text-center">
+                <a href="termofuse.html" target="_blank" class="text-sm accent-color hover:underline">For the full details, please click here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Refund Policy Modal --><div id="refund-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 modal-overlay opacity-0">
+        <div class="modal-container bg-[#0D1117] border border-gray-800 rounded-lg w-full max-w-3xl max-h-[90vh] flex flex-col transform scale-95 opacity-0">
+            <div class="flex-shrink-0 p-6 border-b border-gray-800 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-200">Refund Policy</h2>
+                <button data-close-modal="refund-modal" class="text-gray-500 hover:text-white text-3xl">&times;</V>
+            </div>
+            <div class="modal-content flex-grow overflow-y-auto p-6">
+                <p class="text-sm text-gray-500 mb-6">Last Updated: October 21, 2025</p>
+                <div class="space-y-4 text-gray-400">
+                    <p>At <strong class="font-semibold text-gray-300">zerofundedhustle</strong>, our mission is to create guides that actually move people forward. That’s why we offer a 14-Day Action-Based Refund Guarantee.</p>
+                    <div><h3 class="font-semibold text-gray-300">1. Our 14-Day Action-Based Guarantee</h3><p>If you’ve read the ebook, actively applied the lessons, and still feel you didn’t gain value, you can request a full refund within 14 days of purchase. We’ll just ask for reasonable proof that you gave it a fair try (like notes or summaries of what you applied). This isn’t to make it hard—it’s to make sure you took action before deciding it didn’t work.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">2. How to Request a Refund</h3><p>Email hello@zerofundedhustle.com with your order number and a short explanation of the action you took. Once verified, we’ll process your refund within 5–10 business days.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">3. Eligibility</h3><p>Refunds will not be granted for buyers who haven’t read, tried, or applied the content. We designed this policy to reward action-takers, not just readers.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">4. Contact</h3><p>If you’ve genuinely done the work and still feel it didn’t help, we’ll honor our word. Reach out at: Email: hello@zerofundedhustle.com</p></div>
+                </div>
+            </div>
+             <div class="flex-shrink-0 p-4 border-t border-gray-800 text-center">
+                <a href="refundpolicy.html" target="_blank" class="text-sm accent-color hover:underline">For the full details, please click here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal --><div id="contact-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 modal-overlay opacity-0">
+        <div class="modal-container bg-[#0D1117] border border-gray-800 rounded-lg w-full max-w-3xl max-h-[90vh] flex flex-col transform scale-95 opacity-0">
+            <div class="flex-shrink-0 p-6 border-b border-gray-800 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-200">Contact Us</h2>
+                <button data-close-modal="contact-modal" class="text-gray-500 hover:text-white text-3xl">&times;</button>
+            </div>
+            <div class="modal-content flex-grow overflow-y-auto p-6">
+                 <p class="text-sm text-gray-500 mb-6">Last Updated: October 21, 2025</p>
+                <div class="space-y-4 text-gray-400">
+                    <p class="text-lg">We’re here to help. If you have any questions about your purchase, need support, or just want to share feedback, reach out — we actually read every message.</p>
+                    <div>
+                        <h3 class="font-semibold text-gray-300 text-lg">📬 Email</h3>
+                        <a href="mailto:hello@zerofundedhustle.com" class="text-green-400 hover:underline">hello@zerofundedhustle.com</a>
+                        <p class="text-sm">We typically reply within 24–48 hours (Mon–Fri).</p>
+                    </div>
+                     <div>
+                        <h3 class="font-semibold text-gray-300 text-lg mt-6">🧭 Common Reasons to Contact Us</h3>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Questions about ebooks or future releases</li>
+                            <li>Issues with payments or downloads</li>
+                            <li>Refund or guarantee requests</li>
+                            <li>Collaboration or partnership inquiries</li>
+                            <li>General feedback or support</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 bg-gray-900 border border-gray-700 rounded-lg p-4">
+                        <h3 class="font-semibold text-gray-300">💡 Tip</h3>
+                        <p>If you’re contacting us about an order, include your order number or the email used at checkout — it helps us resolve things faster.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-shrink-0 p-4 border-t border-gray-800 text-center">
+                <a href="contactus.html" target="_blank" class="text-sm accent-color hover:underline">For the full details, please click here</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Data and Logic (Conversion-focused)
+            const faqs = [
+                { q: "Is this another 'get rich quick' scheme?", a: "<strong>Absolutely not.</strong> This is a 'get rich smart' blueprint. 'Get rich quick' is a fantasy that leads to debt. I was <strong>-₹32 Lakh in debt</strong> because I fell for those myths. This book is the exact opposite: real, gradual strategies to build <strong>sustainable, predictable income</strong>." },
+                { q: "How is this different from free content on YouTube?", a: "Free content gives you scattered puzzle pieces. This ebook gives you the <strong>finished picture and the instruction manual.</strong> It's a battle-tested system designed to save you 5+ years of painful, expensive trial and error. You're not just buying information; <strong>you're buying a proven roadmap and speed.</strong>" },
+                { q: "Is this REALLY for the Indian market?", a: "<strong>100% Yes.</strong> Every example, every currency figure (INR), and every strategy is tailored for the Indian context. This isn't recycled Western advice. It's built by an Indian, for the Indian hustler." },
+                { q: "I have zero money. Can I really start a business?", a: "<strong>Yes. That is the entire point of this book.</strong> I started with less than zero (massive debt!). This book focuses exclusively on businesses you can launch with <strong>₹0 investment</strong>. Your biggest asset will be your time and your hunger to win." },
+                { q: "I have a full-time job. How can I find the time?", a: "This was designed for you. The system works in <strong>focused 2-hour blocks</strong> that you can fit into your evenings or weekends. Your 9-5 is your safety net while you build your escape route. <strong>This book shows you how to build the boat before you jump off the ship.</strong>" },
+                { q: "What if I fail?", a: "The old way of failing is catastrophic. The new way—the ZeroFundedHustle way—is to <strong>fail smart, small, and fast.</strong> The models are designed to have virtually zero financial risk, so you can test ideas without fear of losing your savings. The real failure is staying stuck in a job you hate for the next 40 years." },
+                { q: "How quickly can I see results?", a: "I can't promise you a specific income, but I can promise you a specific plan. If you follow the 3-month roadmap and put in <strong>consistent effort</strong>, seeing your first <strong>₹10,000-₹20,000 is a very realistic goal.</strong> From there, you scale." },
+                { q: "What if I'm not a 'business person'?", a: "Neither was I. I was just a guy who was desperate to get out of a financial hole. This book breaks down everything into simple, non-jargon steps. If you can follow a recipe, you can follow this blueprint." }
+            ];
+
+            const faqContainer = document.getElementById('faq-container');
+            if (faqContainer) {
+                faqs.forEach(faq => {
+                    const faqItem = document.createElement('div');
+                    faqItem.className = 'faq-item'; 
+                    faqItem.innerHTML = `
+                        <button class="w-full p-6 text-left flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-200">${faq.q}</span>
+                            <span class="faq-icon text-2xl accent-color font-thin transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-gray-400 text-left">${faq.a}</p>
+                        </div>
+                    `;
+                    faqContainer.appendChild(faqItem);
+                });
+
+                faqContainer.addEventListener('click', function(e) {
+                    const button = e.target.closest('button');
+                    if (!button) return;
+                    const faqItem = button.parentElement;
+                    
+                    if(faqItem.classList.contains('active')) {
+                        faqItem.classList.remove('active');
+                    } else {
+                        const activeItem = faqContainer.querySelector('.faq-item.active');
+                        if(activeItem) {
+                            activeItem.classList.remove('active');
+                        }
+                        faqItem.classList.add('active');
+                    }
+                });
+            }
+            
+            // Animation Observer
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Mobile CTA Visibility Logic
+            const mobileCta = document.getElementById('mobile-cta');
+            const heroSection = document.querySelector('section');
+            const faqSection = document.getElementById('faq-section');
+
+            if (mobileCta && heroSection && faqSection) {
+                // Calculate positions once, assuming layout is static. For dynamic layouts, you might recalculate on resize.
+                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                const faqTop = faqSection.offsetTop;
+
+                window.addEventListener('scroll', () => {
+                    const scrollPosition = window.scrollY;
+
+                    // Show if scroll is past hero AND before the top of the FAQ section
+                    if (scrollPosition > heroBottom && scrollPosition < faqTop) {
+                        mobileCta.classList.remove('translate-y-full');
+                    } else {
+                        mobileCta.classList.add('translate-y-full');
+                    }
+                }, { passive: true });
+            }
+
+            // Lead Magnet Form Submission
+            const leadForm = document.getElementById('lead-magnet-form');
+            const leadSuccessMessage = document.getElementById('lead-success-message');
+            if(leadForm) {
+                leadForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // In a real application, you would send this to your email service
+                    console.log('Email captured:', document.getElementById('lead-email').value);
+                    leadForm.style.display = 'none';
+                    leadSuccessMessage.classList.remove('hidden');
+                });
+            } 
+
+            // Review Form Submission Logic & Toggle
+            const reviewFormContainer = document.getElementById('review-form-container');
+            const showReviewButton = document.getElementById('show-review-form-button');
+            const reviewForm = document.getElementById('review-form');
+            const reviewSuccessMessage = document.getElementById('review-success-message');
+            
+            if(showReviewButton && reviewFormContainer) {
+                showReviewButton.addEventListener('click', () => {
+                    reviewFormContainer.classList.add('visible'); // Add class to trigger CSS transition
+                    showReviewButton.style.display = 'none'; // Hide the button
+                });
+            }
+
+            if(reviewForm && reviewSuccessMessage && reviewFormContainer) {
+                reviewForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // In a real application, you would send this data to a server/database
+                    const name = document.getElementById('review-name').value;
+                    const rating = document.getElementById('review-rating').value; // Get rating
+                    const review = document.getElementById('review-text').value;
+                    console.log('Review Submitted:', { name, rating, review }); // Log rating too
+                    
+                    reviewForm.style.display = 'none'; 
+                    reviewSuccessMessage.classList.remove('hidden'); 
+                });
+            } 
+
+            // Star Rating Logic (NEW)
+            const starRatingInputContainer = document.getElementById('star-rating-input');
+            const reviewRatingInput = document.getElementById('review-rating');
+
+            if (starRatingInputContainer && reviewRatingInput) {
+                const maxStars = 5;
+                let currentRating = 0;
+
+                // Create stars
+                for (let i = 1; i <= maxStars; i++) {
+                    const starSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    starSvg.setAttribute("fill", "currentColor");
+                    starSvg.setAttribute("viewBox", "0 0 20 20");
+                    starSvg.setAttribute("data-value", i);
+                    starSvg.innerHTML = `<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />`;
+                    starRatingInputContainer.appendChild(starSvg);
+                }
+
+                const stars = starRatingInputContainer.querySelectorAll('svg');
+
+                const setRating = (rating) => {
+                     stars.forEach(star => {
+                        star.classList.toggle('filled', parseInt(star.dataset.value) <= rating);
+                    });
+                };
+
+                starRatingInputContainer.addEventListener('mouseover', (e) => {
+                    const targetStar = e.target.closest('svg');
+                    if (targetStar) {
+                        setRating(parseInt(targetStar.dataset.value));
+                    }
+                });
+
+                starRatingInputContainer.addEventListener('mouseout', () => {
+                    setRating(currentRating); // Reset to clicked rating on mouse out
+                });
+
+                starRatingInputContainer.addEventListener('click', (e) => {
+                     const targetStar = e.target.closest('svg');
+                    if (targetStar) {
+                        currentRating = parseInt(targetStar.dataset.value);
+                        reviewRatingInput.value = currentRating; // Update hidden input
+                        setRating(currentRating); // Visually update stars
+                    }
+                });
+            }
+
+            // --- Scrollbar Width Calculation (FLICKER FIX) ---
+            function getScrollbarWidth() {
+                const outer = document.createElement('div');
+                outer.style.visibility = 'hidden';
+                outer.style.overflow = 'scroll'; 
+                outer.style.msOverflowStyle = 'scrollbar'; 
+                document.body.appendChild(outer);
+                const inner = document.createElement('div');
+                outer.appendChild(inner);
+                const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+                outer.parentNode.removeChild(outer);
+                return scrollbarWidth;
+            }
+            let scrollbarCompensationApplied = false;
+            // --- End Scrollbar Width Calculation ---
+
+            // Modal Logic
+            const modals = {
+                'privacy-modal': document.getElementById('privacy-modal'),
+                'terms-modal': document.getElementById('terms-modal'),
+                'refund-modal': document.getElementById('refund-modal'),
+                'contact-modal': document.getElementById('contact-modal')
+            };
+
+            const openModal = (modalId) => {
+                const modal = modals[modalId];
+                if (!modal) return;
+
+                // --- Add Scrollbar Compensation ---
+                const scrollbarWidth = getScrollbarWidth();
+                if (document.body.scrollHeight > window.innerHeight && scrollbarWidth > 0) { 
+                    document.body.style.paddingRight = `${scrollbarWidth}px`;
+                    scrollbarCompensationApplied = true;
+                }
+                // --- End Scrollbar Compensation ---
+
+                document.body.style.overflow = 'hidden'; 
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('.modal-container').classList.remove('scale-95', 'opacity-0');
+                }, 10);
+            };
+
+            const closeModal = (modalId) => {
+                const modal = modals[modalId];
+                if (!modal) return;
+
+                // --- Remove Scrollbar Compensation ---
+                if (scrollbarCompensationApplied) {
+                    document.body.style.paddingRight = ''; // Remove added padding
+                    scrollbarCompensationApplied = false;
+                }
+                 // --- End Scrollbar Compensation ---
+
+                document.body.style.overflow = ''; // Restore body scroll BEFORE animation
+                modal.querySelector('.modal-container').classList.add('scale-95', 'opacity-0');
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            };
+            
+             document.getElementById('privacy-policy-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal('privacy-modal');
+            });
+
+            document.getElementById('terms-of-use-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal('terms-modal');
+            });
+
+            document.getElementById('refund-policy-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal('refund-modal');
+            });
+
+            document.getElementById('contact-us-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal('contact-modal');
+            });
+            
+            document.querySelectorAll('[data-close-modal]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.closest('.modal-overlay').id; 
+                    closeModal(modalId);
+                });
+            });
+
+            document.querySelectorAll('.modal-overlay').forEach(overlay => {
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) {
+                        closeModal(overlay.id);
+                    }
+                });
+            });
+
+        }); 
+    </script>
+
+</body>
+</html>
+
