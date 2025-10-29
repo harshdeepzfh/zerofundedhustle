@@ -471,8 +471,9 @@
                     </button>
                 </form>
                  <p id="lead-success-message" class="text-green-400 mt-4 hidden">Success! Check your inbox for the free chapters.</p>
-            </div>
-        </section>
+                 <p id="lead-error-message" class="text-red-400 mt-4 hidden">Something went wrong. Please try again.</p>
+             </div>
+         </section>
         
         <!-- "Who Is This For?" Section -->
         <section class="py-24 md:py-32 section bg-[#0D1117] border-y border-gray-800">
@@ -979,17 +980,46 @@
             }
 
             // Lead Magnet Form Submission
-            const leadForm = document.getElementById('lead-magnet-form');
-            const leadSuccessMessage = document.getElementById('lead-success-message');
-            if(leadForm) {
-                leadForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    // In a real application, you would send this to your email service
-                    console.log('Email captured:', document.getElementById('lead-email').value);
-                    leadForm.style.display = 'none';
-                    leadSuccessMessage.classList.remove('hidden');
+            document.getElementById('lead-magnet-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('lead-email').value;
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                document.getElementById('lead-success-message').classList.add('hidden');
+                document.getElementById('lead-error-message').classList.add('hidden');
+                
+                // YOUR ACTUAL SCRIPT URL
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwWhyRu1wKeHtsz_aR4V4pcyOuQa5Mnw1ooxy_7FT31b8QgjcAuXupEWb-faj4n2I6vxQ/exec';
+                
+                fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // This prevents the cross-origin error
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: 'email=' + encodeURIComponent(email)
+                })
+                .then(response => {
+                    // Because of 'no-cors', we can't read the response.
+                    // We just assume success because the request was sent.
+                    document.getElementById('lead-success-message').classList.remove('hidden');
+                    document.getElementById('lead-magnet-form').style.display = 'none'; // Hide the form
+                })
+                .catch(error => {
+                    // This will now only catch actual network errors (e.g., user is offline)
+                    document.getElementById('lead-error-message').textContent = 'Network error. Please check your connection and try again.';
+                    document.getElementById('lead-error-message').classList.remove('hidden');
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    }, 2000);
                 });
-            } 
+            }); 
 
             // Review Form Submission Logic & Toggle
             const reviewFormContainer = document.getElementById('review-form-container');
@@ -1168,4 +1198,8 @@
 
 </body>
 </html>
+
+
+
+
 
