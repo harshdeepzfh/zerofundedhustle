@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-WWW-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeroFundedHustle | Escape The 9-5 With Proven Online Business Models</title>
     <link rel="icon" type="image/png" href="favicon.png">
@@ -185,7 +185,7 @@
             transition: max-height 0.6s ease-in-out;
         }
         #review-form-container.visible {
-            max-height: 500px; /* Adjust if form is taller */
+            max-height: 600px; /* Increased height for email field */
         }
          /* --- End Review Form Transition --- */
 
@@ -618,7 +618,7 @@
                                     <div class="star-rating">★★★★★</div>
                                 </div>
                             </div>
-                            <p class="text-lg text-gray-400">"As a student, this was a goldmine. The zero-investment models are practical, not just theory. <strong>Already started my first side hustle using the service blueprint.</strong>"</p>
+                            <p class="text-lg text-gray-400">"As a. student, this was a goldmine. The zero-investment models are practical, not just theory. <strong>Already started my first side hustle using the service blueprint.</strong>"</p>
                         </div>
                         <div class="testimonial-card text-left">
                              <div class="flex items-center mb-4">
@@ -663,6 +663,11 @@
                             <input type="text" id="review-name" name="name" placeholder="Enter your name..." required class="w-full bg-[#010409] border border-gray-700 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
                         </div>
                         
+                        <div>
+                            <label for="review-email" class="block text-sm font-medium text-gray-400 mb-1">Your Email</label>
+                            <input type="email" id="review-email" name="email" placeholder="Enter your email..." required class="w-full bg-[#010409] border border-gray-700 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                        </div>
+
                         <!-- Star Rating Input -->
                         <div>
                              <label class="block text-sm font-medium text-gray-400 mb-1 text-center">Your Rating</label> <!-- Centered Label -->
@@ -823,10 +828,10 @@
                     <p>By accessing or using <strong class="font-semibold text-gray-300">zerofundedhustle.com</strong>, you agree to these Terms of Use. If you don’t agree, please don’t use the site.</p>
                     <div><h3 class="font-semibold text-gray-300">1. Use of Our Website</h3><p>You agree to use this website only for lawful purposes. You must not reproduce, sell, or distribute our content or ebooks without permission.</p></div>
                     <div><h3 class="font-semibold text-gray-300">2. Products and Payments</h3><p>All prices are in INR. Payments are processed securely. As our products are digital, please refer to our Refund Policy for details on eligibility.</p></div>
-                    <div><h3 class="font-semibold text-gray-300">3. Intellectual Property</h3><p>All content on this website, including the ebook, belongs to <strong class="font-semibold text-gray-300">zerofundedhstle</strong>. Purchasing an ebook gives you a personal license to read it, not to share or resell it.</p></div>
+                    <div><h3 class="font-semibold text-gray-300">3. Intellectual Property</h3><p>All content on this website, including the ebook, belongs to <strong class="font-semibold text-gray-300">zerofundedhustle</strong>. Purchasing an ebook gives you a personal license to read it, not to share or resell it.</p></div>
                     <div><h3 class="font-semibold text-gray-300">4. Disclaimer</h3><p>All content is for educational purposes only. We don’t guarantee specific results. Any actions you take are your responsibility.</p></div>
                      <div><h3 class="font-semibold text-gray-300">5. Governing Law</h3><p>These terms are governed by the laws of India. Any disputes will be handled in the courts of Punjab, India.</p></div>
-                    <div><h3 class="font-semibold text-gray-300">6. Contact</h3><p>For any questions about these Terms, reach us at: Email: hello@zerofundedhTle.com</p></div>
+                    <div><h3 class="font-semibold text-gray-300">6. Contact</h3><p>For any questions about these Terms, reach us at: Email: hello@zerofundedhustle.com</p></div>
                 </div>
             </div>
             <div class="flex-shrink-0 p-4 border-t border-gray-800 text-center">
@@ -994,7 +999,7 @@
                 document.getElementById('lead-error-message').classList.add('hidden');
                 
                 // YOUR ACTUAL SCRIPT URL
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzBQJfd1eYX6Q7vS5fESWg-Z4dpp3eCBmWMH7hBMxWAecsbunqXgc1Dx7tYXM11cpy1jw/exec';
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbnPtEGHTNZaw5jze9cVu1JDq1_Sb7q2jfcYSfu_8_2BEhCYeTZ3v0HAG0DTuk1mkR/exec';
                 
                 fetch(SCRIPT_URL, {
                     method: 'POST',
@@ -1039,10 +1044,13 @@
                     e.preventDefault();
                     // In a real application, you would send this data to a server/database
                     const name = document.getElementById('review-name').value;
+                    const email = document.getElementById('review-email').value; // Added this
                     const rating = document.getElementById('review-rating').value; // Get rating
                     const review = document.getElementById('review-text').value;
-                    console.log('Review Submitted:', { name, rating, review }); // Log rating too
+                    console.log('Review Submitted:', { name, email, rating, review }); // Log email too
                     
+                    // Add your review submission logic here (e.g., fetch to another Google Script)
+
                     reviewForm.style.display = 'none'; 
                     reviewSuccessMessage.classList.remove('hidden'); 
                 });
