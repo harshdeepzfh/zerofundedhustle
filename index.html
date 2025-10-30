@@ -242,6 +242,32 @@
         }
          /* --- END BANNER SCROLLER STYLES --- */
 
+        /* --- Button Loading Spinner --- */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .button-loading {
+            position: relative;
+            color: transparent !important; /* Hide text */
+            pointer-events: none; /* Disable clicks while loading */
+        }
+        .button-loading::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -12px; /* Half of height */
+            margin-left: -12px; /* Half of width */
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        /* --- End Button Loading Spinner --- */
+
     </style>
 </head>
 <body class="antialiased">
@@ -689,6 +715,7 @@
                         </div>
                     </form>
                      <p id="review-success-message" class="text-green-400 mt-6 hidden">Thank you! Your review has been submitted.</p>
+                     <p id="review-error-message" class="text-red-400 mt-6 hidden">Something went wrong. Please try again.</p>
                  </div>
             </div>
         </section>
@@ -990,9 +1017,8 @@
                 
                 const email = document.getElementById('lead-email').value;
                 const submitButton = this.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
                 
-                submitButton.textContent = 'Sending...';
+                submitButton.classList.add('button-loading'); // Add spinner class
                 submitButton.disabled = true;
                 
                 document.getElementById('lead-success-message').classList.add('hidden');
@@ -1019,10 +1045,9 @@
                     document.getElementById('lead-error-message').classList.remove('hidden');
                 })
                 .finally(() => {
-                    setTimeout(() => {
-                        submitButton.textContent = originalText;
-                        submitButton.disabled = false;
-                    }, 2000);
+                    // No need to re-enable the button since the form is hidden
+                    // But we'll remove the class just in case
+                    submitButton.classList.remove('button-loading');
                 });
             }); 
 
@@ -1031,6 +1056,7 @@
             const showReviewButton = document.getElementById('show-review-form-button');
             const reviewForm = document.getElementById('review-form');
             const reviewSuccessMessage = document.getElementById('review-success-message');
+            const reviewErrorMessage = document.getElementById('review-error-message');
             
             if(showReviewButton && reviewFormContainer) {
                 showReviewButton.addEventListener('click', () => {
@@ -1039,20 +1065,52 @@
                 });
             }
 
-            if(reviewForm && reviewSuccessMessage && reviewFormContainer) {
+            if(reviewForm && reviewSuccessMessage && reviewFormContainer && reviewErrorMessage) {
                 reviewForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    // In a real application, you would send this data to a server/database
-                    const name = document.getElementById('review-name').value;
-                    const email = document.getElementById('review-email').value; // Added this
-                    const rating = document.getElementById('review-rating').value; // Get rating
-                    const review = document.getElementById('review-text').value;
-                    console.log('Review Submitted:', { name, email, rating, review }); // Log email too
                     
-                    // Add your review submission logic here (e.g., fetch to another Google Script)
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    
+                    submitButton.classList.add('button-loading'); // Add spinner class
+                    submitButton.disabled = true;
 
-                    reviewForm.style.display = 'none'; 
-                    reviewSuccessMessage.classList.remove('hidden'); 
+                    reviewSuccessMessage.classList.add('hidden');
+                    reviewErrorMessage.classList.add('hidden');
+
+                    const name = document.getElementById('review-name').value;
+                    const email = document.getElementById('review-email').value;
+                    const rating = document.getElementById('review-rating').value;
+                    const review = document.getElementById('review-text').value;
+                    
+                    const REVIEW_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWcyI4vqvMCBguI-pYj7Snpc1CISGtkTuZR-1JvcUHqr3abGxGAkqdAH6VMksLjuc3JQ/exec';
+
+                    // Construct form data
+                    const formData = new URLSearchParams();
+                    formData.append('name', name);
+                    formData.append('email', email);
+                    formData.append('rating', rating);
+                    formData.append('review', review);
+
+                    fetch(REVIEW_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors', // Prevent CORS errors
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                        body: formData.toString()
+                    })
+                    .then(response => {
+                        // 'no-cors' means we can't read the response, so we assume success
+                        reviewForm.style.display = 'none'; 
+                        reviewSuccessMessage.classList.remove('hidden'); 
+                    })
+                    .catch(error => {
+                        // This will only catch network errors
+                        reviewErrorMessage.textContent = 'Network error. Please check your connection.';
+                        reviewErrorMessage.classList.remove('hidden');
+                    })
+                    .finally(() => {
+                        // No need to re-enable, but good practice
+                        submitButton.classList.remove('button-loading');
+                    });
                 });
             } 
 
